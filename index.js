@@ -8,13 +8,8 @@ var routes = require('./routes');
 const PORT = process.env.PORT || 5000;
 
 var app = express();
-/*
-app.use(cors({
-  origin: 'https://bad-api-assignment.reaktor.com'
-}));*/
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'client/build')));
-//app.use(express.static('public'));
 
 app.use('/', routes);
 

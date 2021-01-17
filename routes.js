@@ -30,17 +30,14 @@ function fetchRetry(url, attempts = 20) {
 }
 
 router.get('/v2/products/:category', function(req, res) {
-  //let url = new URL("/error", `http://${req.headers.host}`);
   let url = "https://bad-api-assignment.reaktor.com/v2/products/" + req.params.category;
   fetchRetry(url)
   .then(data => {
-    //res.set('Cache-control', 'public, max-age=300');
     res.send(data);
   });
 });
 
 router.get('/v2/availability/:manufacturer', function(req, res) {
-  //let url = new URL("/error", `http://${req.headers.host}`);
   let url = "https://bad-api-assignment.reaktor.com/v2/availability/" + req.params.manufacturer;
   fetchRetry(url)
   .then(data => {
@@ -52,17 +49,5 @@ router.get('/v2/availability/:manufacturer', function(req, res) {
 router.get('*', (req,res) =>{
   res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
-
-/*
-router.get('/v2/products/beanies', function(req, res) {
-  fetch('https://bad-api-assignment.reaktor.com/v2/products/beanies', {
-    method: 'GET',
-    headers: {
-      'x-force-error-mode': 'all'
-    }})
-  .then(response => response.json())
-  .then(data => res.json(data));
-});
-*/
 
 module.exports = router;
