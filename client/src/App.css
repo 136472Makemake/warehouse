@@ -1,0 +1,66 @@
+.App, nav {
+  text-align: center;
+  font-family: "Courier New", monospace;
+  width: 100%;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 42px;
+}
+
+.products li {
+  display: block ;
+  border: 2px solid #000;
+  background-color: #fff;
+  padding: 10px 25px;
+  margin-top:5px;
+  margin-bottom:5px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.products {
+  list-style: none;
+  padding: 0;
+  font-size: 32px;
+  margin-bottom: 2em;
+}
+
+nav {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+nav a {
+  list-style: none;
+  padding: 0;
+  font-size: 32px;
+  margin-bottom: 2em;
+  color: inherit; 
+  text-decoration: inherit;
+}
+
+nav li {
+  display: inline;
+}
+
+.navButton {
+  display: inline;
+  border: 2px solid #000;
+  background-color: #fff;
+  padding: 10px 25px;
+  margin: 20px 10px 20px 10px;
+}
+
+.navButton:hover {
+  background-color: #FDD836;
+}
+.navButton:active {
+  background-color: #FFEFA9;
+}
+
+.fetching {
+  color: gray;
+}
+
