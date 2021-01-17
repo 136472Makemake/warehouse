@@ -15,7 +15,7 @@ function fetchRetry(url, attempts = 20) {
   return fetch(url)
     .then(res => {
       // content-length = 28 means the availability data hasn't been properly sent
-      if (res.ok && res.headers.get('content-length') != 28) {
+      if (res.ok && res.headers.get('content-length') > 28) {
         return res.json();
       }
 
