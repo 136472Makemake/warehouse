@@ -19,6 +19,8 @@ class Availability extends Component {
           if(product.id.toLowerCase() == this.props.id) {
             if(product.DATAPAYLOAD.includes("OUTOFSTOCK")) {
               this.setState({ availability : "Out of stock" });
+            } else if(product.DATAPAYLOAD.includes("LESSTHAN")) {
+              this.setState({ availability : "Less than 10" });
             } else {
               this.setState({ availability : "In stock" });
             } 
